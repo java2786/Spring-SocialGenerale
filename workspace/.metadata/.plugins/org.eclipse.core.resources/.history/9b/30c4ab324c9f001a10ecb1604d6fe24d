@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns= "http://www.springframework.org/schema/beans"
+xmlns:xsi= "http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation= "http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans.xsd" >
+<import resource="spring-11-convertDate.xml"/>
+	<bean id="dateFormat" class="java.text.SimpleDateFormat">
+		<constructor-arg value="dd-MM-yyyy" />
+	</bean>
+
+	<bean id ="library1"  class ="com.dto.Library">
+		<property name="address" value="Connaught place, Delhi"/>
+		<property name="book" ref="book"/>
+		<property name="librarian" ref="librarian"/>
+	</bean>
+	<bean name ="library2"  class ="com.dto.Library">
+		<property name="address" value="Bangaluru"/>
+	</bean>
+	
+	<bean id="book" class ="com.dto.Book">
+		<property name="price" value="999.99" />
+		<property name="issueDate">
+			<bean factory-bean="dateFormat" factory-method="parse">
+				<constructor-arg value="31-07-1986" />
+			</bean>
+		</property>
+	</bean>
+	
+	<bean id="librarian" class ="com.dto.Person">
+		<property name="name" value="Cyrus" />
+		<property name="dob" value="28-05-1989" />
+	</bean>
+	
+	<bean id="librarian" class ="com.dto.Person">
+		<property name="name" value="Miley" />
+		<property name="dob" value="31-07-1986" />
+	</bean>
+	
+	
+	<bean id ="library3"  class ="com.dto.Library" autowire="constructor">
+		<property name="address" value="Connaught place, Delhi"/>
+		<!-- <constructor-arg ref="librarian" /> -->
+	</bean>
+	
+
+</beans>

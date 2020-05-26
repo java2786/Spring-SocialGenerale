@@ -1,0 +1,15 @@
+package com.demo.controllers;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+@Controller
+public class DemoController {
+
+//	localhost:8888/P01-springmvc/mvc/greet
+	@RequestMapping("/greet")
+	public String greetUser() {
+		System.out.println("Welcome user");
+		return "user/greet";
+	}
+}

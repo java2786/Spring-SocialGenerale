@@ -1,0 +1,27 @@
+package com.demo.controllers;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+@Controller
+public class DemoController {
+
+//	localhost:8888/P01-springmvc/mvc/greet
+	@RequestMapping("/greet")
+	public String greetUser() {
+		System.out.println("Welcome user");
+		return "user/greet";
+	}
+	
+	
+//	localhost:8888/P01-springmvc/mvc/greet/{name}
+	@RequestMapping("/greet/{name}")
+	public String greetArun(@PathVariable String name, Model model) {
+		System.out.println("Welcome "+name);
+		model.addAttribute("username", name)
+		return "user/greet2";
+	}
+
+}

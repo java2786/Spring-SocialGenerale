@@ -1,0 +1,10 @@
+INDEX VERSION 1.4+D:\Training\Spring - Societe Generale\workspace\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
+1685098386.index
+2454762588.index
+1167878046.index
+525189244.index
+3471933401.index
+2192945185.index
+824956711.index
+2423342512.index
+508391031.index

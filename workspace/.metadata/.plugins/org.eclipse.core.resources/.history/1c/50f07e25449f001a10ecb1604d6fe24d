@@ -1,0 +1,9 @@
+package com.demo;
+
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+public class TestSpring {
+	public static void main(String[] args) {
+		new ClassPathXmlApplicationContext("bean.xml");
+	}
+}

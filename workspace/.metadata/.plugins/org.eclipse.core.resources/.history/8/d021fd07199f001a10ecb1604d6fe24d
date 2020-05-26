@@ -1,0 +1,31 @@
+package com.demo.controllers;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+
+import com.demo.entity.User;
+
+@Controller
+@RequestMapping("user")
+public class UserController {
+
+	@RequestMapping(value="login", method=RequestMethod.GET)
+	public String loginPage() {
+		return "user/login";
+	}
+	
+	@RequestMapping(value="login", method=RequestMethod.POST)
+	public String loginHandler(@ModelAttribute User user) {
+		System.out.println(user);
+		if(user!=null && user.equals("demo@gamil.com")) {
+			System.out.println("valid user");
+			return "user/welcome";
+		} else {
+			System.out.println("Invalid user");
+			return "user/login";
+		}
+//		return "user/login";
+	}
+}

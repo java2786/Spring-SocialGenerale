@@ -1,0 +1,32 @@
+package org.demo.without.ioc;
+
+class Car{
+	private Engine engine = new EngineA();
+	public void start() {
+		engine.run();
+	}
+}
+
+interface Engine{
+
+	public void run();
+	
+}
+class EngineA implements Engine{
+	public void run() {
+		System.out.println("EngineA started");
+	}	
+}
+class EngineB implements Engine{
+	public void run() {
+		System.out.println("EngineB started");
+	}	
+}
+
+public class IOC_Demo {
+
+	public static void main(String[] args) {
+		Car bmw = new Car();
+		bmw.start();
+	}
+}
