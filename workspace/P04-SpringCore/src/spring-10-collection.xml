@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns= "http://www.springframework.org/schema/beans"
+xmlns:xsi= "http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation= "http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans.xsd" >
+
+		<bean id="mandatorySub" class="java.lang.String">
+			<constructor-arg index="0" value="C++" />
+		</bean>
+
+		<bean id ="course"  class ="com.dto.Course" >
+			<property name="subjects">
+<!-- 1. byList -->
+<!-- 
+				<list>
+					<value>Math</value>
+					<value>Physics</value>
+					<value>English</value>
+					<ref bean="mandatorySub" />
+				</list>
+ -->				
+<!-- 2. bySet -->
+<!-- 
+				<set>
+					<value>Math</value>
+					<value>Physics</value>
+					<value>English</value>
+					<value>C++</value>
+				</set>
+ -->				
+<!-- 2. byMap -->
+
+				<map>
+					<entry key="0" value="Math" />
+					<entry key="1" value="Physics" />
+					<entry key="2" value="English" />
+					<entry key="3" value="C++" />
+				</map>
+
+			</property>
+		</bean>
+		
+</beans>

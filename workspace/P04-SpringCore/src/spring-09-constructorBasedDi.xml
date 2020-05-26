@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns= "http://www.springframework.org/schema/beans"
+xmlns:xsi= "http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation= "http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans.xsd" >
+
+
+<!-- 1. byId -->
+		<bean id ="studentById"  class ="com.dto.Student" >
+			<constructor-arg value ="Ramesh" />
+			<constructor-arg ref ="stdCourse" />
+		</bean>
+		
+		<bean id ="stdCourse"  class ="com.dto.Course" >
+			<!-- properties -->
+		</bean>
+
+<!-- 2. byType -->
+	<bean id ="studentByType"  class ="com.dto.Student" >
+		<constructor-arg type ="java.lang.String"  value ="Strange" />
+		<constructor-arg type ="com.dto.Course">
+			<bean class="com.dto.Course">
+				<property name="admissionYear" value="2014" />
+				<property name="fee" value="25999.99" />
+			</bean>
+		</constructor-arg>
+	</bean>
+	<bean id ="studentCourseByIndex"  class ="com.dto.Student" >
+		<constructor-arg type ="java.lang.String"  value ="Strange" />
+		<constructor-arg type ="com.dto.Course">
+			<bean class="com.dto.Course">
+<!-- 3. byIndex -->
+				<constructor-arg index="1" value="25999.99" />
+				<constructor-arg index="0" value="2014" />
+			</bean>
+		</constructor-arg>
+	</bean>
+	
+</beans>

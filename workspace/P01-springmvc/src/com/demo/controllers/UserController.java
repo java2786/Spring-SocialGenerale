@@ -18,6 +18,7 @@ public class UserController {
 	}
 	
 	@RequestMapping(value="login", method=RequestMethod.POST)
+	// request has attribute/data/param -> email, pwd
 	public String loginHandler(@ModelAttribute User user, Model model) {
 		System.out.println(user);
 		if(user.getEmail().equals(user.getPwd())) {

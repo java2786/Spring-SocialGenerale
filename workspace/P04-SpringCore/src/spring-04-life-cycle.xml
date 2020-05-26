@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns= "http://www.springframework.org/schema/beans"
+xmlns:xsi= "http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation= "http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans.xsd" >
+
+
+	<bean id="personBean" class= "com.dto.Person">
+		<property name= "name" value= "Arun Kumar" />
+		<property name= "age" value= "32" />
+	</bean>
+	
+	<bean id="person1Bean" class= "com.dto.Person1" init-method="init" destroy-method="destroy">
+		<property name= "name" value= "Carl Mark" />
+		<property name= "age" value= "43" />
+	</bean>
+	
+</beans>
