@@ -1,0 +1,5 @@
+All in one: https://www.youtube.com/watch?v=DzYyzmP4m5c
+Servlets: https://www.youtube.com/watch?v=ewiOaDitBBw
+Servlets + Jsp: https://www.youtube.com/watch?v=TrfqKn6vzAI
+
+Servlets + Jsp example: https://www.javatpoint.com/creating-jsp-in-eclipse-ide
