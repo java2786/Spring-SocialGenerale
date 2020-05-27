@@ -9,6 +9,7 @@ import org.springframework.orm.jpa.LocalEntityManagerFactoryBean;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 import com.demo.dao.EmployeeDao;
+import com.demo.service.EmployeeService;
 
 @Configuration
 @EnableTransactionManagement
@@ -40,4 +41,9 @@ public class AppConfig {
 		return new EmployeeDao();
 	}
 
+	@Bean
+	public EmployeeService employeeService() {
+		return new EmployeeService();
+	}
+	
 }
