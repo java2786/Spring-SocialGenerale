@@ -1,10 +1,15 @@
 package com.demo.entities;
 
+import java.util.List;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 import javax.persistence.Transient;
 
 import org.hibernate.annotations.DynamicUpdate;
@@ -30,6 +35,13 @@ public class Employee {
 	
 	@Transient
 	private int age;
+	
+	@ManyToOne
+	private Department department;
+ 
+	@OneToMany(mappedBy = "employee", fetch=FetchType.EAGER)
+	private List<Phone> phones;
+	
 	
 	public int getEmpId() {
 		return empId;
@@ -67,10 +79,27 @@ public class Employee {
 	public String getEmail() {
 		return email;
 	}
+	public Department getDepartment() {
+		return department;
+	}
+	public void setDepartment(Department department) {
+		this.department = department;
+	}
+	public List<Phone> getPhones() {
+		return phones;
+	}
+	public void setPhones(List<Phone> phones) {
+		this.phones = phones;
+	}
 	@Override
 	public String toString() {
 		return "Employee [empId=" + empId + ", email=" + email + ", firstName=" + firstName + ", lastName=" + lastName
-				+ ", address=" + address + ", age=" + age + "]";
+				+ ", address=" + address + ", age=" + age + ", department=" + department + ", phones=" + phones + "]";
 	}
+	
+	
+	
+	
+	
 	
 }

@@ -25,7 +25,7 @@ public class AppConfig {
 	@Bean
 	public LocalEntityManagerFactoryBean getLocalEntityManagerFactoryBean() {
 		LocalEntityManagerFactoryBean factory = new LocalEntityManagerFactoryBean();
-		factory.setPersistenceUnitName("DemoPersistence");
+		factory.setPersistenceUnitName("MySqlDemoPersistence");
 		return factory;
 	}
 	

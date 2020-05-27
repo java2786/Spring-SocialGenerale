@@ -4,12 +4,14 @@ import java.util.List;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
+import javax.persistence.Query;
 import javax.persistence.criteria.CriteriaQuery;
 import javax.persistence.criteria.Root;
 
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
+import com.demo.entities.Department;
 import com.demo.entities.Employee;
 
 @Repository
@@ -55,5 +57,17 @@ public class EmployeeDao {
 			em.remove(emp);
 		}
 	}
+	
+	
+	public void joinDemo() {
+		Query query =
+			      em.createQuery("SELECT DISTINCT d FROM Department d INNER JOIN d.employees e where e.email='abc@gmail.com'");
+
+			  List<Department> results = query.getResultList();
+			  for (Department d : results) {
+			      System.out.println(d);
+			  }
+	}
+
 	
 }

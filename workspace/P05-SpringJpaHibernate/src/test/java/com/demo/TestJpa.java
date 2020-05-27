@@ -1,11 +1,13 @@
 package com.demo;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 import com.demo.config.AppConfig;
 import com.demo.entities.Employee;
+import com.demo.entities.Phone;
 import com.demo.service.EmployeeService;
 
 public class TestJpa {
@@ -18,14 +20,22 @@ public class TestJpa {
 		Employee emp = new Employee();
 		emp.setFirstName("Mark");
 		emp.setLastName("Carl");
-		emp.setEmail("xyz@gmail.com");		
+		emp.setEmail("xyz@gmail.com");
+		
+		Phone phone = new Phone();
+		phone.setNumber("9696969696");
+		phone.setEmployee(emp);
 
+		List<Phone> phones = new ArrayList();
+		phones.add(phone);
+		emp.setPhones(phones);
+		
 		Employee emp2 = new Employee();
 		emp2.setFirstName("Arun");
 		emp2.setLastName("Kumar");
 		emp2.setEmail("abc@gmail.com");
 		
-//		create(service, emp);
+		create(service, emp);
 //		create(service, emp2);
 		
 //		readOne(service);
@@ -37,8 +47,8 @@ public class TestJpa {
 		readAll(service);
 		
 		
-		
 	}
+
 
 	private static void delete(EmployeeService service) {
 		service.delete(2);
