@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
+		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.0.xsd">
+
+<!-- Enable Spring AOP -->
+<aop:aspectj-autoproxy />
+
+<!-- Employee Bean -->
+<bean name="employee" class="com.demo.spring.model.Employee">
+	<property name="name" value="Arun Kumar"></property>
+</bean>
+
+<!-- EmployeeService bean -->
+<bean name="employeeService" class="com.demo.spring.service.EmployeeService">
+	<property name="employee" ref="employee"></property>
+</bean>
+
+<!-- Configure Aspect Beans -->
+<bean name="employeeAfterAspect" class="com.demo.spring.aspect.Aspect04_EmployeeAfterAspect" />
+
+</beans>

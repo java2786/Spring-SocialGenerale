@@ -1,0 +1,14 @@
+AOP Terminologies
+-----------------
+
+PointCuts:		A set of one or more JoinPoint where an advice should be executed
+JoinPoints:		A place where plug-in Aspects
+Advices:		Method/Cross-cutting concern
+Aspects:		A module/class which containing advice methods
+
+
+Before:			An advice type which ensures that an advice runs before the method execution
+After:			An advice type which ensures that an advice runs after the method execution
+AfterReturning:	An advice type, which ensures that an advice runs after the method executes successfully
+AfterThrowing:	An advice type which ensures that an advice runs after the method execution, only if the method exits by throwing an exception
+Around:			An advice type which ensures that an advice runs before and after the method execution
