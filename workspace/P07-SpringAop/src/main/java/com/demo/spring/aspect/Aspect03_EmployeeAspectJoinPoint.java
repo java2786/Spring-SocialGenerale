@@ -17,6 +17,7 @@ public class Aspect03_EmployeeAspectJoinPoint {
 	@Before("execution(public void com.demo.spring.model..set*(*))")
 	public void loggingAdvice(JoinPoint joinPoint){
 		System.out.println("Before running loggingAdvice on method="+joinPoint.toString());
+		System.out.println("Method name="+joinPoint.getSignature().getName());
 		System.out.println("Agruments Passed = " + Arrays.toString(joinPoint.getArgs()));
 	}
 

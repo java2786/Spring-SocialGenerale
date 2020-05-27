@@ -54,7 +54,6 @@ INDEX VERSION 1.131+D:\Training\Spring - Societe Generale\workspace\.metadata\.p
 2898810988.index
 1338295692.index
 735679050.index
-2321309819.index
 2899291599.index
 2348346607.index
 3341219447.index
