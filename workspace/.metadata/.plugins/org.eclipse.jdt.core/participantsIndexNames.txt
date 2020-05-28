@@ -5,6 +5,8 @@ D:\Training\Spring - Societe Generale\workspace\.metadata\.plugins\org.eclipse.j
 \P01-springmvc\src
 D:\Training\Spring - Societe Generale\workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2423342512.index
 \P01-springmvc\src
+D:\Training\Spring - Societe Generale\workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2082728106.index
+\P11-SpringBootMVC2\src\test\java
 D:\Training\Spring - Societe Generale\workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2429698834.index
 \P10-SpringBootMVC\src\main\java
 D:\Training\Spring - Societe Generale\workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2713543869.index
