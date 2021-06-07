@@ -14,7 +14,7 @@
 		<spring-framework.version>5.0.0.RELEASE</spring-framework.version>
 
 		<!-- Logging -->
-		<logback.version>1.0.13</logback.version>
+		<logback.version>1.2.0</logback.version>
 
 		<!-- AspectJ -->
 		<aspectj.version>1.7.4</aspectj.version>
